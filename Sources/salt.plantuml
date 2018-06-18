@@ -1,0 +1,44 @@
+@startuml (id=salt)
+
+!include common.plantuml
+
+' 将内部元素作为一个整体对待。
+!define one {
+!define eno }
+
+' 将内部元素作为一个平板对待。
+!define pad { . _ { . | . | . | {
+!define dap } | . | . | . } _ . }
+
+' 为独立元素添加一层外边框线。
+!define sex {+ one
+!define xes eno }
+
+' 为平板元素添加一层外边框线。
+!define box {+ pad
+!define xob dap }
+
+' 标签
+!define label(title) title
+
+' 按钮
+!define button(title) [title]
+!define submit(title = '  提交  ') button(title)
+!define ok(title = '  确定  ') button(title)
+!define cancel(title = '  取消  ') button(title)
+!define close(title = '  关闭  ') button(title)
+
+' 文本输入框
+!define textfield(value = '                ') "value"
+!define textview(value = '.|.|.|.|.|.|.|.') sex { value } | . | . | . _ . xes
+
+' 单选框/复选框
+!define checked 'X'
+!define unchecked ' '
+!define radiobox(title, value = ' ') (value) title
+!define checkbox(title, value = ' ') [value] title
+
+' 下拉选择框
+!define combobox(value = '                ') ^value^
+
+@enduml

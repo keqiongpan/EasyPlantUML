@@ -90,4 +90,5 @@
 @startuml (id=salt)
 !define _SALT_DIAGRAM_
 !include easy.plantuml!base
+!include salt.plantuml
 @enduml

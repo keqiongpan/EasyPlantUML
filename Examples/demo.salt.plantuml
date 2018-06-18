@@ -1,0 +1,86 @@
+@startuml (id=demo.salt)
+
+!include ../Sources/easy.plantuml!salt
+
+salt
+{
+    独立元素 : o n e - e n o
+    {#
+        空元素 | one eno
+        单个元素 | one 单个元素 eno
+        多个元素 | one a | b _ c | d eno
+    }
+    .
+    独立元素(带边框) : s e x - x e s
+    {#
+        空元素 | sex xes
+        单个元素 | sex 单个元素 xes
+        多个元素 | sex a | b _ c | d xes
+    }
+    .
+    平板元素 : p a d - d a p
+    {#
+        空元素 | pad dap
+        单个元素 | pad 单个元素 dap
+        多个元素 | pad a | b _ c | d dap
+    }
+    .
+    平板元素(带边框) : b o x - x o b
+    {#
+        空元素 | box xob
+        单个元素 | box 单个元素 xob
+        多个元素 | box a | b _ c | d xob
+    }
+    .
+    标签
+    {#
+        label | label("这是一个标签")
+    }
+    .
+    按钮
+    {#
+        button | button("这是一个按钮")
+        submit | submit()
+        ok | ok()
+        cancel | cancel()
+        close | close()
+    }
+    .
+    文本输入框
+    {#
+        textfield | textfield()
+        textfield | textfield("请输入             ")
+        textview | textview()
+        textview | textview("请输入您的建议...")
+    }
+    .
+    单选框/复选框
+    {#
+        radiobox | radiobox("这是一个未勾选的单选框")
+        radiobox | radiobox("这是一个已勾选的单选框", checked)
+        checkbox | checkbox("这是一个未勾选的复选框")
+        checkbox | checkbox("这是一个已勾选的复选框", checked)
+    }
+    .
+    下拉选择框
+    {#
+        combobox | combobox()
+        combobox | combobox("请选择             ")
+        combobox | combobox("--请选择--         ")
+    }
+    .
+    分隔线
+    {
+        .  | _32(.)
+        .. | _32(*)
+        .  | _32(.)
+        == | _32(*)
+        .  | _32(.)
+        ~~ | _32(*)
+        .  | _32(.)
+        -- | _32(*)
+        .  | _32(.)
+    }
+}
+
+@enduml

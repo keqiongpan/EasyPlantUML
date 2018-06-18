@@ -1,0 +1,9 @@
+@startuml (id=common)
+
+' 回车换行，例如salt图：{# top _ bottom}。
+!definelong _
+
+
+!enddefinelong
+
+@enduml

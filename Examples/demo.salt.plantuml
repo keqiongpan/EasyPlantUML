@@ -66,7 +66,6 @@ salt
     {#
         combobox | combobox()
         combobox | combobox("请选择             ")
-        combobox | combobox("--请选择--         ")
     }
     .
     分隔线

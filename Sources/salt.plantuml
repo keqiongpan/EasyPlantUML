@@ -25,6 +25,8 @@
 !define ok(title = '  确定  ') button(title)
 !define cancel(title = '  取消  ') button(title)
 !define close(title = '  关闭  ') button(title)
+!define yes(title = '  是  ') button(title)
+!define no(title = '  否  ') button(title)
 
 ' 文本输入框
 !define textfield(value = '                ') "value"

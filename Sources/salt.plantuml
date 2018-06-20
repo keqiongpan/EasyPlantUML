@@ -1,6 +1,4 @@
-@startuml (id=salt)
-
-!include common.plantuml
+@startuml (id=_salt)
 
 ' 将内部元素作为一个整体对待。
 !define one {

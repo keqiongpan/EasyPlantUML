@@ -1,11 +1,11 @@
 ' easy.plantuml
 '
-' 您可以将下面的语句放在您的PlantUML源代码的@startuml/@enduml之间，
+' 你可以将下面的语句放在你的PlantUML源代码的@startuml/@enduml之间，
 ' 这样就可以使用EasyPlantUML项目中针对PlantUML的通用的优化功能部份：
 '
 '     !include easy.plantuml
 '
-' 也可以根据您要绘制的图表，将有针对性的优化功能集合到您的源代码中：
+' 也可以根据你要绘制的图表，将有针对性的优化功能集合到你的源代码中：
 '
 '     !include easy.plantuml!activity
 '     !include easy.plantuml!activity_beta
@@ -21,74 +21,254 @@
 '     !include easy.plantuml!gantt
 '     !include easy.plantuml!salt
 '
+' 如果你要使用保存在网络上的EasyPlantUML库，则需要在!include之前先定义
+' EASYPLANTUML_BASEURL的值，例如：
+'
+'     !define EASYPLANTUML_BASEURL https://raw.githubusercontent.com/keqiongpan/EasyPlantUML/master/Sources
+'     !include EASYPLANTUML_BASEURL/easy.plantuml
+'
 
 @startuml (id=base)
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!_common
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!_repeat
+!else
+!includeurl EASYPLANTUML_BASEURL/common.plantuml
+!includeurl EASYPLANTUML_BASEURL/repeat.plantuml
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!_common
+!include easy.allinone.plantuml!_repeat
+!else
 !include common.plantuml
 !include repeat.plantuml
+!endif
+!endif
 @enduml
 
 @startuml (id=activity)
 !define _ACTIVITY_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=activity_beta)
 !define _ACTIVITY_BETA_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=class)
 !define _CLASS_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=component)
 !define _COMPONENT_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=deployment)
 !define _DEPLOYMENT_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=object)
 !define _OBJECT_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=sequence)
 !define _SEQUENCE_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=timing)
 !define _TIMING_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=state)
 !define _STATE_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=usecase)
 !define _USECASE_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=archimate)
 !define _ARCHIMATE_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=gantt)
 !define _GANTT_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!else
 !include easy.plantuml!base
+!endif
+!endif
 @enduml
 
 @startuml (id=salt)
 !define _SALT_DIAGRAM_
+!ifdef EASYPLANTUML_BASEURL
+!ifdef EASYPLANTUML_ALLINONE
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!base
+!includeurl EASYPLANTUML_BASEURL/easy.allinone.plantuml!_salt
+!else
+!includeurl EASYPLANTUML_BASEURL/easy.plantuml!base
+!includeurl EASYPLANTUML_BASEURL/salt.plantuml
+!endif
+!else
+!ifdef EASYPLANTUML_ALLINONE
+!include easy.allinone.plantuml!base
+!include easy.allinone.plantuml!_salt
+!else
 !include easy.plantuml!base
 !include salt.plantuml
+!endif
+!endif
 @enduml

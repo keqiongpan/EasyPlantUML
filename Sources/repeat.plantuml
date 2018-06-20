@@ -1,4 +1,4 @@
-@startuml (id=repeat)
+@startuml (id=_repeat)
 
 ' 重复指定的内容context若干次，并以分隔符separator进行分隔。
 ' 例如： _3(egg) 。

@@ -1,4 +1,4 @@
-@startuml (id=common)
+@startuml (id=_common)
 
 ' 回车换行，例如salt图：{# top _ bottom}。
 !definelong _

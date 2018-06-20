@@ -25,7 +25,7 @@
 ' EASYPLANTUML_BASEURL的值，例如：
 '
 '     !define EASYPLANTUML_BASEURL https://raw.githubusercontent.com/keqiongpan/EasyPlantUML/master/Sources
-'     !include EASYPLANTUML_BASEURL/easy.plantuml
+'     !includeurl EASYPLANTUML_BASEURL/easy.plantuml
 '
 
 @startuml (id=base)
